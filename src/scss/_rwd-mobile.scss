@@ -1,0 +1,180 @@
+@media screen and (max-width:992px){
+  .section-kv {
+    height: vwm(600px);
+
+    &__heading {
+      width: 600px;
+      top: 3.5%;
+    }
+    
+    .section-kv_device{
+      &-arrow{
+        &:nth-child(1){
+          width: 1000px;
+          top: 220px;
+          // left: -600px;
+          left: calc(50% + #{px-em(-100 - (1920/2))});
+        }
+        &:nth-child(2){
+          width: 900px;
+          top: 300px;
+          left: calc(50% + #{px-em(50 - (1920/2))});
+        }
+      }
+    }
+  }
+  .section-sec01 {
+    &__text {
+      &-h4 {
+        font-size: 22px;
+        padding-bottom: 0;
+      }
+      &-ul {
+        font-size: 18px;
+        padding-top: 10px;
+        li{
+          &::before{
+            width: 4px;
+            height: 4px;
+            top: 15px;
+            left: -14px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: #{$mblrwd-breakpoint +'px'}) {
+
+  .section-kv {
+    &__decobox {
+      &-banner {
+        width: vwm(864px);
+        height: vwm(937px);
+        left: vwm(-32px);
+        top: vwm(-447px);
+        border-radius: 0 0 vwm(240px) 0;
+        
+        &--bg {
+          background-image: url('../images/hk_banner__sm.png');
+          background-size: 100%;
+          width: vwm(1425px);
+          height: vwm(1350px);
+          left: vwm(-395px);
+          top: vwm(487px);
+        }
+      }
+    }
+    &__heading {
+      width: vwm(600px);
+      top: vwm(48px);
+      left: vwm(80px);
+      letter-spacing: 1px;
+    }
+    &__h1{
+      width: vwm(146px);
+      margin-bottom: 0;
+    }
+    &__h2{
+      font-size: vwm(45px);
+    }
+    &__h3, &__h4, &__p, &__span {
+      display: none;
+    }
+    .section-kv_device{
+      &-arrow{
+        &:nth-child(1){
+          width: vwm(900px);
+          top: vwm(245px);
+          // left: -600px;
+          left: vwm(-665px);
+        }
+        &:nth-child(2){
+          width: vwm(900px);
+          top: vwm(305px);
+          left: vwm(-552px);
+        }
+      }
+    }
+  }
+
+  .section-sec01 {
+    &__features {
+      align-items: center;
+    }
+    &__body {
+      width: 100%;
+    }
+    &__img {
+      margin: auto;
+    }
+    &__img1 {
+      width: vwm(452px);
+    }
+    &__img2 {
+      width: vwm(523px);
+    }
+    &__img3 {
+      width: vwm(400px);
+    }
+    &__img4 {
+      width: vwm(467px);
+    }
+    &__text {
+      margin-top: vwm(75px);
+      &-h4{
+        font-size: vwm(34px);
+        letter-spacing: vwm(3px);
+      }
+      &-ul{
+        font-size: vwm(30px);
+        line-height: 1.6;
+        letter-spacing: 1.5px;
+        padding-left: vwm(30px);
+        
+        li{
+          &::before{
+            width: vwm(6px);
+            height: vwm(6px);
+            top: vwm(20px);
+            left: vwm(-20px);
+          }
+        }
+      }
+    }
+    &__mgt {
+      margin: auto;
+    }
+    &__sm1 {
+      padding-top: vwm(65px);
+    }
+    &__sm2 {
+      padding-top: vwm(235px);
+    }
+    &__sm3 {
+      padding-top: vwm(60px);
+    }
+    &__sm4 {
+      padding-top: vwm(155px);
+    }
+    //- 淺藍點點
+    &-lightBlueDot{
+      &_place{
+        &:nth-child(1){
+          opacity: 0;
+        }
+      }
+    }
+    //- 藍色漸層
+    &-blueGradient{
+      &_place{
+        &:nth-child(2){
+          opacity: 0;
+        }
+        &:nth-child(3){
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

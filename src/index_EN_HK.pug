@@ -1,0 +1,111 @@
+extends _layout_EN_HK.pug
+
+block content
+
+  article
+    section#sec_kv.section-kv
+      .section-kv__decobox
+        .section-kv__decobox-banner
+          .section-kv__decobox-banner--bg
+      .section-kv__heading
+        h1.section-kv__h1
+          img(src="images/svg/EASY.svg", alt="EASY APP")
+        h2.section-kv__h2 “easy by Bank SinoPac” Launch in Hong Kong
+        h3.section-kv__h3 Great mind. Easy style.
+        p.section-kv__p Hong Kong Branch has launched a mobile banking easy APP, 
+          |which allows you to keep track of your account status and to access to banking service more easily
+      .section-kv_device
+        .section-kv_device-arrow
+          img(src="images/img_kv-arrow1.svg", alt="")
+        .section-kv_device-arrow
+          img(src="images/img_kv-arrow2.svg", alt="")
+        .section-kv_device-blueBox.para-Right(data-speed='0.5')
+          img(src="images/img_kv-blueBox.svg", alt="")
+        .section-kv_device-bluePink.para-Right(data-speed='0.1')
+          img(src="images/img_kv-bluePinkBox.svg", alt="")
+        .section-kv_device-yellowDot.yellowDot.para-Right(data-speed='0.1')
+
+
+    section#sec_01.section-sec01
+      .container
+        //- h2.section-sec01__h2 精簡功能 easy使用
+        .section-sec01__features
+          .section-sec01__body.section-sec01__sm1(data-aos="fade-up" data-aos-duration="800")
+            //- .section-sec01__item.step1
+            .section-sec01__img.section-sec01__img1
+              img(src="images/hk_img-content1.svg", alt="全面帳戶管理")
+            .section-sec01__wrap
+              .section-sec01__text
+                h4.section-sec01__text-h4 Comprehensive account management
+                ul.section-sec01__text-ul
+                  li Provide real-time account balance inquiry, account information at a glance
+                  li Account transaction history inquiry to 3 months, through choosing the date intervals, can quickly locate and review transaction records you want
+                  li Comprehensive account management, reviewing the details of fixed deposits, loans, and e-statement
+          .section-sec01__body.section-sec01__mgt.section-sec01__sm2(data-aos="fade-up" data-aos-duration="1200")
+            //- .section-sec01__item.step1
+            .section-sec01__img.section-sec01__img2.step1-mgl
+              img(src="images/hk_img-content2.svg", alt="便利的匯款& 轉帳服務")
+            .section-sec01__wrap
+              .section-sec01__text
+                h4.section-sec01__text-h4 Convenient remittance and transfer services
+                ul.section-sec01__text-ul
+                  li Provide multi-currency global remittance & transfer service, to execute cross-border transaction in an easy way
+                  li Provide outward remittance inquiry, to review remittance processing status and remittance details at any time
+          .section-sec01__body.section-sec01__sm3(data-aos="fade-up" data-aos-duration="1400")
+            //- .section-sec01__item.step1
+            .section-sec01__img.section-sec01__img3.pic3
+              img(src="images/hk_img-content3.svg", alt="最新消息 & 利率資訊")
+            .section-sec01__wrap
+              .section-sec01__text
+                h4.section-sec01__text-h4 Latest news & interest information
+                ul.section-sec01__text-ul 
+                  li Review interest rate information to grasp the trend of interest rates
+                  li Click the latest news to keep up with bank information
+
+          .section-sec01__body.section-sec01__mgt.section-sec01__sm4(data-aos="fade-up" data-aos-duration="1600")
+            //- .section-sec01__item.step1
+            .section-sec01__img.section-sec01__img4.step1-mgl.pic4
+              img(src="images/hk_img-content4.svg", alt="雙重身分認證 & 快速登入")
+            .section-sec01__wrap
+              .section-sec01__text
+                h4.section-sec01__text-h4 Two-factor authentication & quick Login
+                ul.section-sec01__text-ul
+                  li Adopt a two-factor authentication mechanism to strengthen the security of online transactions
+                  li After successful identity verification and binding the mobile phone, you can set up a quick login according to your needs
+      
+      //- 黃點點
+      .section-sec01-yellowDot
+        .section-sec01-yellowDot_place.yellowDot.para-sec01-Right(data-speed='0.2')
+        .section-sec01-yellowDot_place.yellowDot.para-sec01-Left(data-speed='0.5')
+        .section-sec01-yellowDot_place.yellowDot.para-sec01-Right(data-speed='0.4')
+        .section-sec01-yellowDot_place.yellowDot.para-sec01-Left(data-speed='0.6')
+        .section-sec01-yellowDot_place.yellowDot.para-sec01-Right(data-speed='0.1')
+      //- 藍點點
+      .section-sec01-blueDot
+        .section-sec01-blueDot_place.blueDot.para-sec01-Right(data-speed='0.5')
+        .section-sec01-blueDot_place.blueDot.para-sec01-Left(data-speed='0.2')
+        .section-sec01-blueDot_place.blueDot.para-sec01-Right(data-speed='0.3')
+      //- 淺藍點點
+      .section-sec01-lightBlueDot
+        .section-sec01-lightBlueDot_place.lightBlueDot.para-sec01-Right(data-speed='0.2')
+        .section-sec01-lightBlueDot_place.lightBlueDot.para-sec01-Left(data-speed='0.1')
+      //- 藍色漸層
+      .section-sec01-blueGradient
+        .section-sec01-blueGradient_place.blueGradient.para-box-Right(data-speed='0.8')
+        .section-sec01-blueGradient_place.blueGradient.para-box-Right(data-speed='0.1')
+        .section-sec01-blueGradient_place.blueGradient.para-box-Left(data-speed='0.3')
+      //- 藍粉框
+      .section-sec01-bluePinkBox.para-sec01-Right(data-speed='0.4')
+        img(src="images/img_kv-bluePinkBox.svg", alt="")
+      //- 藍框
+      .section-sec01-blueBox.para-sec01-Left(data-speed='0.7')
+        img(src="images/img_kv-blueBox.svg", alt="")
+      //- 粉點點
+      .section-sec01-pinkDot.para-sec01-Right(data-speed='0.5')
+        img(src="images/img_kv-pinkDot.svg", alt="")
+                    
+    include _lightbox.pug
+
+  .cursor 
+  .cursor__inner
+

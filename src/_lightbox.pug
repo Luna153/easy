@@ -1,0 +1,27 @@
+
+.lightbox#lbox
+  .lightbox__content
+    .lightbox__box
+      a.lightbox__btn-close.close(href='javascript:;', title='關閉')
+      .lightbox__body
+        case lang
+          when 'en'
+            .lightbox__title.noto-700 Information Security Reminder
+            .lightbox__text.en.noto-300 
+              p To maintain transaction security, please download the official software from Apple store or Google Play store. Moreover, it is recommended to install information security software to enhance the data security of using mobile devices.
+              p If you have used a mobile device with non-original system settings, please use easy by Bank SinoPac with caution to avoid personal information leakage or mobile device privilege hacking.
+          when 'vi'
+            .lightbox__title.noto-700 Khuyến cáo bảo mật
+            .lightbox__text.en.noto-300 
+              p Để duy trì bảo mật trong giao dịch, vui lòng tải phần mềm chính thức tại Apple Store hoặc Google Play. Khuyến nghị khách hàng nên cài đặt phần mềm bảo mật thông tin để tăng cường bảo mật dữ liệu của thiết bị di động.
+              p Nếu thiết bị di động đang không sử dụng phần mềm chính thức, vui lòng sử dụng phần mềm easy App một cách thận trọng để tránh rò rỉ thông tin cá nhân.
+          when 'cn'
+            .lightbox__title.noto-700 信息安全温馨提醒
+            .lightbox__text.en.noto-300 
+              p 为维护交易安全，请至Apple store或Google Play商店下载官方软件，并建议安装资安防护软件，以提高使用行动装置之资料安全性。
+              p 若行动装置曾经使用非原厂系统设定，请谨慎使用永丰海外行动银行easy by Bank SinoPac，以避免个资外泄或行动装置权限遭破解
+          default
+            .lightbox__title.noto-700 資訊安全溫馨提醒
+            .lightbox__text.noto-300 
+              P 為維護交易安全，請至Apple store或Google Play商店下載官方軟體，並建議安裝資安防護軟體，以提高使用行動裝置之資料安全性。
+              p 若行動裝置曾經使用非原廠系統設定，請謹慎使用永豐海外行動銀行easy by Bank SinoPac，以避免個資外洩或行動裝置權限遭破解

@@ -1,0 +1,224 @@
+include _layout_data.pug
+
+doctype html
+html(lang="zh-Hant")
+  block vars
+    - var isEasy = true // Easy or Sinopac
+    - var hasCarousel = true // 有無輪播
+    - var header_title = 'Enhance Your Life with the Easy App'
+    - var author = 'SinoPac Bank'
+    - var og_title = 'Enhance Your Life with the Easy App'
+    - var og_image = ''
+    - var og_url = 'https://easy.sinopac.com'
+    - var og_desc = 'SinoPac Bank Overseas Mobile Banking Enhances Your Life'
+    - var meta_keyword = 'SinoPac Bank, Overseas Mobile Banking, easy app, cross-border, remittance, transfer, account inquiry, cross-border financial services'
+    - var root = '../../'
+    - var lang = 'en';
+    - var area = 'hk';
+
+  head
+    block head
+      meta(name='lang')
+      meta(name='area')
+      meta(charset='UTF-8')
+      meta(http-equiv='X-UA-Compatible', content='IE=edge,Chrome=1')
+      meta(http-equiv='Cache-Control', content='no-cache')
+      meta(http-equiv='Pragma', content='no-cache')
+      meta(http-equiv='Expires', content='0')
+      meta(property='og:title', content=(og_title ? og_title + ' | ' + author : ''))
+      meta(property='og:image', content=og_image ? og_image : '')
+      meta(property='og:url', content=og_url ? og_url : '')
+      meta(property='og:description', content=og_desc ? og_desc : '')
+      meta(name='author', content=author)
+      meta(name='copyright', content=author)
+      if meta_keyword != ''
+        meta(name='keywords', content=meta_keyword)
+      meta(name='description', content=og_desc ? og_desc : '')
+      meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
+      title #{og_title ? og_title + ' | ' + author : ''}
+      case isEasy
+        when true
+          link(rel='shortcut icon', href='images/favicon.ico')
+        default
+          link(rel='shortcut icon', href=(root + 'img/favicon.ico'))
+      if hasCarousel
+        link( href="css/owl.carousel.min.css",rel="stylesheet")
+      link(href="css/aos.css",rel="stylesheet")
+      link(href='css/styles.css?v=2406', rel='stylesheet', type='text/css')
+      link(href='css/splide.min.css', rel='stylesheet')
+            
+      link(rel='preconnect' href='https://fonts.googleapis.com')
+      link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+      link(href='https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap' rel='stylesheet')
+      
+      script(src="js/ScrollTrigger.min.securejs" type="text/javascript")
+
+      //- Google Tag Manager
+      case isEasy
+        when true
+          script.
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-NZ5VPHL');
+        default
+          script.
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-NS27F8N');
+        //- End Google Tag Manager
+
+      //- 數位足跡
+      case isEasy
+        when true
+          script(src='js/sensorstrackerV140.js')
+
+
+
+  body
+    //- 香港地區
+    //- img(src="./materials/easy app3_1.png" alt="" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width:1920px; opacity: 0.5; z-index: 9999; pointer-events: none;")
+    //- img(src="./materials/easy app3_小版-繁體.png" alt="" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width:768px; opacity: 0.5; z-index: 9999; pointer-events: none;")
+    
+
+    //- loading
+    case isEasy
+      when true
+        #overlayer
+        .loader
+          .sinopac-logo
+            img(src="images/sinopac-logo.svg" alt="永豐銀行")
+          .loading
+            img(src="images/S-loading.svg")
+      default
+        #overlayer
+        .loader
+          .dawho-logo
+            img(src="images/dawho-logo.svg" alt="DAWHO 大戶")
+          .loading
+            img(src="images/D-loading.svg")
+
+    .wrapper-container
+      .wrapper
+        .wrapper-mask
+        block header
+          header
+            .nav__container
+              .nav__row
+                .nav__logo
+                  case isEasy
+                    when true
+                      a(href='https://bank.sinopac.com/', title=author + '首頁', target="_blank" rel="noopener noreferrer")
+                        img(src='images/sinopac-logo.svg', alt=author)
+                    default
+                      a(href='https://dawho.tw/', title=author + '首頁', target="_blank" rel="noopener noreferrer")
+                        img(src='images/logo_dawho.svg', alt=author)
+                a.nav__trigger
+                  span
+                  span
+                  span
+                ul.nav__menu
+                  //- each item in tw_data
+                  each item in (lang === 'tw' ? tw_data : (lang === 'cn' ? cn_data : (lang === 'vi' ? vi_data : en_data)))
+                    //- 資安提醒
+                    li.openlb
+                      a.link(href="#lb")=item.nav_remind
+                    //- 常見問題
+                    li.dropdown
+                      a.link(href="https://bank.sinopac.com/GCSDsp/DspFAQList.aspx?item=overbusiness", target="_blank" rel="noopener noreferrer")=item.nav_faq
+                    li
+                      //- 香港區 聯絡客服
+                      a.link(href="https://chatservice.sinopac.com/wise/webchat/default/?t=JnS9ISdGJfXzWcJuuI0cSg%3D%3D", target="_blank" rel="noopener noreferrer")=item.nav_contact
+                    li.download
+                      //-下載APP 
+                      a.link(href="#section-footer")=item.nav_download
+                    li
+                      //- 語系
+                      .select-wrapper
+                        .select
+                          .select__box
+                            .select__icon
+                            .select__trigger
+                              span.tb=item.nav_lang
+                              span.mb Language
+                          //- data-href
+                          .custom-options
+                            each item in (area === 'hk' ? option_lang_HK : option_lang_VN)
+                              a(href=item.href) 
+                                span.custom-option(data-value=item.value data-href=item.href)=(item.content)
+                    li
+                      //- 地區
+                      .select-wrapper-area
+                        .select-area
+                          .select-area__box
+                            .select-area__icon
+                            .select-area__trigger
+                              span Hong Kong
+                              //- span Vietnam
+                          //- data-href
+                          .custom-options-area
+                            each item in (lang === 'tw' ? tw_data : (lang === 'cn' ? cn_data : (lang === 'vi' ? vi_data : en_data)))
+                              a(href=item.area_href[0])
+                                span.custom-option-area(data-value=item.value data-href=item.area_href class=index === 0 ? 'selected' : '')=(item.nav_area[0])
+                              a(href=item.area_href[1])
+                                span.custom-option-area(data-value=item.value data-href=item.area_href class=index === 0 ? 'selected' : '')=(item.nav_area[1])
+
+        block left
+        block content
+        block fixed
+
+        block foot
+          footer#section-footer
+            .container
+              each item in (lang === 'tw' ? tw_data : (lang === 'cn' ? cn_data : (lang === 'vi' ? vi_data : en_data)))
+                .bg
+                  img(src='images/svg/line-1.svg' alt='')
+                  img(src='images/svg/line-2.svg' alt='')
+                .download(data-aos="fade-up" data-aos-duration="1200")
+                  .download-title.noto-900=item.footer_download_title
+                  .download-wrap
+                    a.qrcode(href="https://easy.sinopac.com/notice" target="_blank" rel="noopener noreferrer")
+                      img(src='images/svg/qrcode.svg' alt='EASY APP')
+                    .link
+                      a(href="https://apps.apple.com/us/app/easy-by-bank-sinopac/id1541109427" target="_blank" rel="noopener noreferrer") 
+                        img(src='images/svg/iOS.svg' alt='download IOS')
+                      a(href="https://play.google.com/store/apps/details?id=com.sinopac.easy", target="_blank" rel="noopener noreferrer")
+                        img(src='images/svg/Android.svg' alt='download Android')
+                  .download-info 
+                    .download-version.noto-400=item.footer_download_version_1
+                    a.download-version.noto-400(href="https://www.mmab2c.com/MemberPortal/Member/B2cWebLogin_en.aspx" target="_blank" rel="noopener noreferrer")=item.footer_download_version_2
+                    .download-version.noto-400=item.footer_download_version_3
+                .line(data-aos="fade-up" data-aos-duration="1400")
+                .prize(data-aos="fade-up" data-aos-duration="1600") 
+                  span.noto-900=item.footer_prize_title
+                  img(src='images/svg/award.svg' alt='')
+                  p.noto-400=item.footer_prize_version
+                    br
+                    | 
+            .container-2
+              each item in (lang === 'tw' ? tw_data : (lang === 'cn' ? cn_data : (lang === 'vi' ? vi_data : en_data)))
+                .copyright
+                  p=item.footer_copyright
+                    | 
+                  p.hidden-min.resolution
+                    a.footer-link(href='https://mma.sinopac.com/Bank/BankFrame.aspx?url=browser/upgrade.html' target='_blank' rel="noopener noreferrer" style="margin:0;")=item.footer_resolution
+                    | 
+                    //- | /建議解析度1024*768
+                  p.hidden-min=item.footer_phone
+                .copyright
+                  p
+                    a.footer-link(href="https://bank.sinopac.com/mma8/bank/service/cs-phonecall.html#tab3" target="_blank" rel="noopener noreferrer")=item.footer_center
+                      | 
+                    a.footer-link(href="https://bank.sinopac.com/sinopacBT/footer/privacy-statement.html", target="_blank" rel="noopener noreferrer")=item.footer_announcement
+                      | 
+    block script
+      script(src='js/jquery-latest.min.securejs' type='text/javascript')
+      script(src='js/jquery-migrate-latest.min.securejs' type='text/javascript')
+      script(src="js/gsap.min.securejs" type='text/javascript')
+      script(src='js/aos.securejs', type='text/javascript')
+      if hasCarousel
+        script(src="js/owl.carousel.min.securejs", type="text/javascript")
+        script(src='js/scripts.securejs', type='text/javascript')

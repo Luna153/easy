@@ -1,0 +1,73 @@
+@if $hasCarousel {
+  .owl-carousel {
+    .owl-nav {
+      position: absolute;
+      top: 34%;
+      left: 0;
+      right: 0;
+
+      .owl-prev,
+      .owl-next {
+        position: absolute;
+        transition: all .3s;
+        outline: none;
+        width: 60px;
+        >img{
+          width:vwm(24px);
+        }
+        &:focus,&:active{
+          background-color: transparent;
+          outline: none;
+        }
+
+        &.disabled {
+          opacity: .2;
+          cursor: default;
+        }
+
+        span {
+          // display: inline-block;
+          // color: #B88435;
+          // font-size: 90px;
+        }
+      }
+
+      .owl-prev {
+        left: 6%;
+      }
+
+      .owl-next {
+        right: 6%;
+        transform: rotate(180deg);
+      }
+    }
+
+    .owl-dots {
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      transform: translate(-50%, -5%);
+    }
+
+    button.owl-dot {
+      vertical-align: middle;
+      @include size(15px);
+      border: 1px solid $blue;
+      background-color: transparent;
+      margin: 0 10px;
+      border-radius: 50%;
+      outline: none;
+      transition: border .2s;
+
+      @include ie-only {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      &:hover,
+      &.active {
+        background-color: $blue;
+      }
+    }
+  }
+}

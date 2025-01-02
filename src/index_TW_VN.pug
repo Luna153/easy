@@ -1,0 +1,114 @@
+extends _layout.pug
+
+block content
+  article
+    section#sec_kv.section-kv
+      .cover-banner
+        .splide.slider-activation
+          .splide__track
+            ul.row.imglist.splide__list
+              li.splide__slide
+                .activate-steps
+                  .activate-steps--screenshot1
+                    img(src='images/kv_img-vn1.jpg' alt='')
+                  .activate-steps--text.section-kv__heading
+                    h1.section-kv__h1.step
+                      img(src="images/svg/EASY.svg", alt="EASY APP")
+                    h2.section-kv__h2.desc.noto-900 掌握easy 豐富生活
+                      br
+                      |Great mind. Easy style.
+              li.splide__slide
+                .activate-steps
+                  .activate-steps--screenshot2
+                    img(src='images/kv_img-vn2.png' alt='')
+                  .activate-steps--text.section-kv__heading
+                    h1.section-kv__h1.step
+                      img(src="images/svg/EASY.svg", alt="EASY APP")
+                    h2.section-kv__h2.desc.noto-900 線上驗證開立eKYC帳戶 – 
+                      br
+                      |即時、便利、觸手可及
+              li.splide__slide
+                .activate-steps
+                  .activate-steps--screenshot3
+                    img(src='images/kv_img-vn3.png' alt='')
+                  .activate-steps--text.section-kv__heading
+                    h1.section-kv__h1.step
+                      img(src="images/svg/EASY.svg", alt="EASY APP")
+                    h2.section-kv__h2.desc.noto-900 Online Loan – 
+                      br
+                      |永豐銀行官方推出的貸款服務
+
+    section#sec_01.section-sec01
+      .container
+        .section-sec01__features
+          .section-sec01__body.section-sec01__sm1(data-aos="fade-up" data-aos-duration="800")
+            .section-sec01__img.section-sec01__img1
+              img(src="images/vn/vn_img-content1.svg", alt="Nền tảng công nghệ ứng dụng eKYC trên easy App")
+            .section-sec01__wrap
+              .section-sec01__text
+                h4.section-sec01__text-h4.noto-900 使用easyAPP開立eKYC帳戶
+                ul.section-sec01__text-ul.noDot.noto-400
+                  li 線上開立eKYC帳戶省去客戶排隊等候時間及繁瑣的手續
+                  li 只需3-5分鐘即完成開戶流程，並能在easyAPP使用所有金融服務
+          .section-sec01__body.section-sec01__mgt.section-sec01__sm2(data-aos="fade-up" data-aos-duration="1200")
+            .section-sec01__img.section-sec01__img2.step1-mgl
+              img(src="images/vn/vn_img-content2.svg", alt="Ưu điểm vượt trội khi vay qua Online Loan của Bank SinoPac")
+            .section-sec01__wrap
+              .section-sec01__text.section-sec01__text-vn2
+                h4.section-sec01__text-h4.noto-900 申請永豐銀行線上貸款
+                ul.section-sec01__text-ul.noto-400
+                  li 貸款金額高達月收入的15倍，最高為5億越南盾
+                  li 貸款期限從最短12個月到最長48個月不等
+                  li 申請核准後於24小時內撥款
+          .section-sec01__body.section-sec01__sm3(data-aos="fade-up" data-aos-duration="1400")
+            .section-sec01__img.section-sec01__img3.pic3
+              img(src="images/vn/vn_img-content3.svg", alt="Tích hợp nhiều loại tiền tệ, nắm bắt toàn bộ thông tin tài khoản")
+            .section-sec01__wrap
+              .section-sec01__text.section-sec01__text-vn2
+                h4.section-sec01__text-h4.noto-900 多幣別整合，帳務管理全掌握
+                ul.section-sec01__text-ul.space.noto-400
+                  li 交易輕鬆轉，解決跨境大小事
+                  li 帳務不漏接，快速查帳不費力
+      
+      .section-sec01_device
+        .section-sec01_device-arrow
+          img(src="images/img_kv-arrow1.svg", alt="")
+        .section-sec01_device-arrow
+          img(src="images/img_kv-arrow2.svg", alt="")
+        .section-sec01_device-blueBox.para-Right(data-speed='0.5')
+          img(src="images/img_kv-blueBox.svg", alt="")
+        .section-sec01_device-bluePink.para-Right(data-speed='0.1')
+          img(src="images/img_kv-bluePinkBox.svg", alt="")
+        .section-sec01_device-yellowDot.yellowDot.para-Right(data-speed='0.1')
+      //- 黃點點
+      .section-sec01-yellowDot
+        .section-sec01-yellowDot_place.yellowDot.para-sec01-Right(data-speed='0.2')
+        .section-sec01-yellowDot_place.yellowDot.para-sec01-Left(data-speed='0.5')
+        .section-sec01-yellowDot_place.yellowDot.para-sec01-Right(data-speed='0.4')
+      //- 藍點點
+      .section-sec01-blueDot
+        .section-sec01-blueDot_place.blueDot.para-sec01-Right(data-speed='0.5')
+        .section-sec01-blueDot_place.blueDot.para-sec01-Left(data-speed='0.2')
+      //- 淺藍點點
+      .section-sec01-lightBlueDot
+        .section-sec01-lightBlueDot_place.lightBlueDot.para-sec01-Right(data-speed='0.2')
+      //- 藍色漸層
+      .section-sec01-blueGradient
+        .section-sec01-blueGradient_place.blueGradient.para-box-Right(data-speed='0.8')
+        .section-sec01-blueGradient_place.blueGradient.para-box-Right(data-speed='0.1')
+        .section-sec01-blueGradient_place.blueGradient.para-box-Left(data-speed='0.3')
+      //- 藍粉框
+      .section-sec01-bluePinkBox.para-sec01-Right(data-speed='0.4')
+        img(src="images/img_kv-bluePinkBox.svg", alt="")
+      //- 藍框
+      .section-sec01-blueBox.para-sec01-Left(data-speed='0.7')
+        img(src="images/img_kv-blueBox.svg", alt="")
+      //- 粉點點
+      .section-sec01-pinkDot.para-sec01-Right(data-speed='0.5')
+        img(src="images/img_kv-pinkDot.svg", alt="")
+            
+    include _lightbox.pug
+    
+    .cursor_vn
+    .cursor_vn__inner
+

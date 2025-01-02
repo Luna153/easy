@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 974.61 261.22">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #759fdb;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        fill: #759fdb;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="BG">
+    <g>
+      <line class="cls-1" x1=".39" y1="1.45" x2="520.44" y2="139.82"/>
+      <line class="cls-1" x1="622.24" y1="166.52" x2="974.22" y2="259.77"/>
+      <g>
+        <polygon class="cls-2" points="536.66 134.62 543.34 145.97 531.94 152.62 536.66 134.62"/>
+        <polygon class="cls-2" points="557.97 140.15 564.66 151.49 553.25 158.15 557.97 140.15"/>
+        <polygon class="cls-2" points="579.28 145.67 585.97 157.02 574.57 163.67 579.28 145.67"/>
+        <polygon class="cls-2" points="600.59 151.2 607.28 162.55 595.88 169.2 600.59 151.2"/>
+      </g>
+    </g>
+  </g>
+</svg>

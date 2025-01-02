@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.99 55.35">
+  <defs>
+    <style>
+      .cls-1{
+        stroke-dasharray: 8;
+        stroke-dashoffset: 160;
+        animation: line 10s forwards;
+      }
+      @keyframes line {
+        100% {
+          stroke-dashoffset: 0;
+        }
+      }
+      
+    </style>
+  </defs>
+  <g >
+    <g id="word">
+      <line class="cls-1" stroke="#fff" x1="14.5" x2="14.5" y2="54.5" />
+      <polyline class="arrow" stroke="#fff" fill="none" points="28.64 40.5 14.5 54.64 0.35 40.5" />
+    </g>
+  </g>
+</svg>

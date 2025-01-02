@@ -1,0 +1,15 @@
+@charset "UTF-8";
+@import "_reset.scss";
+@import "_variables.scss"; //所有變數與 functions
+@import "_base.scss"; // 基礎 CSS 檔案
+@import "_keyframes.scss"; // CSS3 Animations
+@import "_carousel.scss"; // carousel 輪播
+@import "_header.scss"; // 網頁 Header 包含
+@import "_footer.scss"; // 網頁 Footer
+@import "_loading.scss"; // loading 畫面
+@import "_lightbox.scss";
+@import "_master.scss"; // 主要 CSS 撰寫
+@import "_master_vn.scss"; //越文版 CSS
+@import "_rwd-pc-mid.scss"; // 768 ~ 1280 pc 中間寬度的 rwd
+@import "_rwd-mobile.scss"; // 手機版 768 以下的 rwd
+@import "_public.scss"; // 公共(全域)使用

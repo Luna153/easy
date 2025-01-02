@@ -1,0 +1,200 @@
+@media (max-width: #{$bpcrwd-breakpoint + 'px'}) {
+  .section-kv {
+    height: 740px;
+  
+    &__decobox {
+      &-banner {
+        width: 102%;
+        left: 40px;
+        
+        &--bg {
+          background-position-x: center;
+        }
+      }
+    }
+    &__heading{
+      left: 200px;
+      width: vwpc(800px);
+      top: 5%;
+    }
+    &__h1 {
+      width: vwpc(226px);
+    }
+    &__h2 {
+      font-size: vwpc(44px);
+    }
+    &__h3 {
+      font-size: vwpc(36px);
+    }
+    &__p {
+      font-size: vwpc(18px);
+    }
+    &__span {
+      font-size: vwpc(27px);
+    }
+    .section-kv_device{
+      &-arrow{
+        &:nth-child(1){
+          top: 280px;
+        }
+        &:nth-child(2){
+          top: 380px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: #{$pcrwd-breakpoint + 'px'}) {
+  .section-kv {
+    height: 700px;
+  
+    &__decobox {
+      &-banner {
+        width: 100%;
+        height: 900px;
+        left: 0;
+        top: -450px;
+        
+        &--bg {
+          top: 38%;
+        }
+      }
+    }
+    
+    &__heading {
+      left: vw(160px);
+      width: 700px;
+    }
+
+    &__h1 {
+      width: 200px;
+    }
+
+    &__h2 {
+      font-size: 32px;
+    }
+
+    &__h3 {
+      font-size: 25px;
+      letter-spacing: vw(5px);
+    }
+    
+    &__p {
+      font-size: 18px;
+    }
+    
+    &__span {
+      font-size: 25px;
+    }
+    
+    .section-kv_device{
+      &-arrow{
+        &:nth-child(1){
+          top: 160px;
+        }
+        &:nth-child(2){
+          top: 260px;
+        }
+      }
+    }
+
+    &__wrap {
+      margin-top: vw(-48px);
+    }
+
+    &__list {
+      margin-top: vw(26px);
+      margin-bottom: vw(72px);
+    }
+
+    &__round {
+      @include size(vw(320px));
+
+      margin: 0 vw(25px) vw(30px);
+
+      > img {
+        width: vw(270px);
+      }
+    }
+  }
+
+  .section-sec01 {
+    
+    &__features{
+      width: 90%;
+      margin: auto;
+    }
+    
+    &__img1 {
+      width: vw(452px);
+      margin-left: vw(18px);
+    }
+    &__img2 {
+      width: vw(368px);
+      margin-left: vw(55px);
+      margin-top: vw(50px);
+    }
+    &__img3 {
+      width: vw(275px);
+      margin-left: vw(35px);
+    }
+    &__img4 {
+      width: vw(300px);
+      margin-left: vw(85px);
+    }
+    
+    &__h2 {
+      margin-top: vw(65px);
+    }
+
+    &__text {
+      margin-top: vw(30px);
+
+      &-h4 {
+        font-size: 24px;
+      }
+
+      &-ul {
+        font-size: 20px;
+        padding-bottom: vw(8px);
+      }
+    }
+
+    .step2 {
+      align-items: flex-end;
+      margin-left: 0;
+
+      &-mgl {
+        margin-left: -48px;
+      }
+    }
+
+    .fx-end {
+      // padding-top: 0;
+      margin-bottom: 1%;
+
+      &.w-after {
+        &:after {
+          width: 120%;
+        }
+      }
+    }
+    //- 淺藍點點
+    &-lightBlueDot{
+      &_place{
+        &:nth-child(2){
+          opacity: 0;
+        }
+      }
+    }
+    //- 黃點點
+    &-yellowDot{
+      &_place{
+        &:nth-child(5){
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
